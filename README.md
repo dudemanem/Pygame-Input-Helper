@@ -23,6 +23,8 @@
        - if input_helper.is_key_held(input_helper.keys.space):
            print("space is being held down")
 
+     6. To check for mouse button clicks use... will finish this later :3
+
 
 
 *Complete List of Current Keycodes and Their Translation in the Keys Subclass*
