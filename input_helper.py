@@ -160,7 +160,7 @@ class eInput:
     
     def mouse_down(self, button, events):
         for event in events:
-            if event.type == keys.mouse:
+            if event.type == self.keys.mouse:
                 mouse_buttons = pygame.mouse.get_pressed()
                 for b in mouse_buttons:
                     if b == button:
@@ -172,7 +172,7 @@ class eInput:
         events = pygame.event.get()
         key_events = []
         for event in events:
-            if event.type == pygame.KEYDOWN:
+            if event.type == pygame.KEYDOWN or event.type == self.keys.mouse or event.type == self.keys.mouse_up:
                 key_events.append(event)
         return key_events
         
