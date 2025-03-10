@@ -5,6 +5,7 @@
  -Changes pygame keycodes to make them simpler and easier to remember.
 
  *GUIDE*
+ 
      1. Before using, you have to import it.
        - import input_helper.py
      
