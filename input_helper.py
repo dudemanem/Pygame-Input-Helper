@@ -139,10 +139,34 @@ class eInput:
         power = pygame.K_POWER
         euro = pygame.K_EURO
         ac_back = pygame.K_AC_BACK
+        mouse = pygame.MOUSEBUTTONDOWN
+        mouse_up = pygame.MOUSEBUTTONUP
         
         
-    keys = key_class()
+    keys = key_class()    
         
+
+    def mouse_pos(self):
+        mouse_pos = pygame.mouse.get_pos()
+        return mouse_pos
+        
+    def mouse_held(self, button):
+        mouse_buttons = pygame.mouse.get_pressed()
+        for b in mouse_buttons:
+            if b == button:
+                return True
+        return False
+        
+    
+    def mouse_down(self, button, events):
+        for event in events:
+            if event.type == keys.mouse:
+                mouse_buttons = pygame.mouse.get_pressed()
+                for b in mouse_buttons:
+                    if b == button:
+                        return True
+                return False        
+    
     #gets and returns all events that are key presses
     def get_key_events(self):
         events = pygame.event.get()
