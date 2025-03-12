@@ -17,13 +17,19 @@
 
      4. To check keypresses, use is_key_down(self, keycheck, events).
        - if input_helper.is_key_down(input_helper.keys.space, key_events):
-           print("space pressed")
+             print("space pressed")
 
      5. To check if a key is held down, use is_key_held(self,check).
        - if input_helper.is_key_held(input_helper.keys.space):
-           print("space is being held down")
+             print("space is being held down")
+ 
+     6. To check for mouse button clicks, use mouse_down(self, button, events), where button is a number 1-5 corresponding to left click, middle button, right click, upscroll, and downscroll.
+       - if input_helper.mouse_down(1, key_events):
+             print("left click")
 
-     6. To check for mouse button clicks use... will finish this later :3
+     7. To check if a mouse button is being held, use input_helper.mouse_held(self, button), where button is a number 1-5 corresponding to left click, middle button, right click, upscroll, and downscroll.
+       - if input_helper.mouse_held(1)
+             print("left mouse button is held down")
 
 
 
